@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body, html { margin: 0; padding: 0; height: 100%; background: #0f0c29; color: white; font-family: sans-serif; }
+        
+        /* 3D Model Section */
+        #viewer-container { width: 100%; height: 70vh; display: flex; justify-content: center; align-items: center; }
+        
+        /* Fixed Buttons Section at Bottom */
+        .controls {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+            border-top: 2px solid #ff0055;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .btn {
+            background: #ff0055;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover { background: #ff7700; transform: scale(1.1); }
+        
+        #wallet-display { font-size: 20px; text-align: center; margin-top: 10px; color: #00ffcc; }
+    </style>
+</head>
+<body>
+
+    <!-- 3D Animation Area -->
+    <div id="viewer-container">
+        <!-- Spline ya Three.js ka 3D model yahan aayega -->
+        <h2 style="color: #555;">[3D Model Area]</h2>
+    </div>
+
+    <!-- Wallet Balance -->
+    <div id="wallet-display">Balance: ₹0.00</div>
+
+    <!-- Bottom Buttons -->
+    <div class="controls">
+        <button class="btn" onclick="watchAd()">Watch Ad</button>
+        <button class="btn" onclick="withdraw()">Withdraw</button>
+    </div>
+
+    <script>
+        function watchAd() {
+            alert("Redirecting to Ad...");
+            // Yahan Ad SDK ka code ayega
+        }
+        function withdraw() {
+            let upi = prompt("Enter your UPI ID:");
+            if(upi) alert("Request sent to Admin!");
+        }
+    </script>
+</body>
+</html>
